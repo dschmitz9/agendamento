@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento</title>
+    <link rel="stylesheet" href="Agendamento.css">
+</head>
+<body>
+
+<h2>Formulário de Agendamento</h2>
+
+<form id="formAgendamento">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required><br><br>
+    
+    <label for="data">Dia do Agendamento:</label>
+    <input type="date" id="data" name="data" required><br><br>
+    
+    <label for="horario">Horário:</label>
+    <select id="horario" name="horario" required>
+        <option value="" disabled selected>Selecione um horário</option>
+        <option value="17:00">17:00</option>
+        <option value="18:00">18:00</option>
+        <option value="19:00">19:00</option>
+        <option value="20:00">20:00</option>
+        <option value="21:00">21:00</option>
+        <option value="22:00">22:00</option>
+        <option value="23:00">23:00</option>
+    </select><br><br>
+    
+    <input type="submit" value="Agendar">
+</form>
+
+<div id="extrato" style="display:none;">
+    <h2>Extrato do Agendamento</h2>
+    <p><strong>Nome:</strong> <span id="nomeExtrato"></span></p>
+    <p><strong>Dia do Agendamento:</strong> <span id="dataExtrato"></span></p>
+    <p><strong>Horário:</strong> <span id="horarioExtrato"></span></p>
+</div>
+
+<script src="agendamento.js"></script>
+</body>
+</html>
